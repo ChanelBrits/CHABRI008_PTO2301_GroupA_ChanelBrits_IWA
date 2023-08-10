@@ -1,7 +1,10 @@
 const add = (a, b) => a + b;
-
 const multiply = (a, b) => a * b;
 
+/* 
+ * Calculates the sum of the internal.a and internal.b properties and multiplies
+ * it by the internal.c property.
+ */
 const internal = function() {
     console.log(this.add(this.internal.a, this.internal.b) * this.internal.c);
     return this;

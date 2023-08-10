@@ -4,20 +4,21 @@ let calculated = '1'
 
 // Only allowed to change below
 
-/* logCalc function calculates the result based on the input argument.
- * If input is a string, it is parsed into an integer and stored as 'isString',
- * else 'isString' remains null. The final result 'calculatedAsNumber' is
- * obtained by adding 1 to 'isString'. The function returns 'calculatedAsNumber'.
+/* 
+ * Evaluates the input and determines if it is a string. If true, it will parse
+ * the string to an integer and add 1. If false, it will return null.
+ * @param {string} input
  */
 const logCalc = (input) => { 
-    const isString = typeof input === 'string' ? parseInt(calculated) : null;// true
+    const isString = typeof input === 'string' ? parseInt(calculated) : null;
     const calculatedAsNumber = isString + 1;
     return calculatedAsNumber;
 };
 
-/* calcUser function updates the 'calculated', 'user', and 'state' variables
- * based on the current 'calculated' value. It sets 'user' to 'John' and 'state'
- * to 'requesting' if 'calculated' is >= 2, otherwise sets 'state' to 'idle'.
+/* 
+ * Runs the logCalc function and adds 1 to the result. If the result is greater
+ * and equal to 2, it change the user and state to 'requesting'. If the result is greater than
+ * 3, it will set the state variable to 'idle'.
  */
 const calcUser = () => {
     calculated = logCalc(calculated) + 1;
