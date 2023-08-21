@@ -65,11 +65,18 @@ const data = {
   
 
 // Only edit below this comment
+
 const {
     NM372: athlete1,
     SV782: athlete2
 } = data.response.data;
 
+/**
+ * Creates an HTML fragment displaying the information of an athlete's latest
+ * race.
+ * @param {object} athlete 
+ * @returns {DocumentFragment} 
+ */
 const createHtml = (athlete) => {
     const getLatestRaceInfo = (athlete) => {
         const [latestRace] = athlete.races.reverse().slice(0, 1);
