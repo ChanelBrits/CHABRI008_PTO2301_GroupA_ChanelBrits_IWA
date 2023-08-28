@@ -5,8 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kitchen Express</title>
-    <link rel="stylesheet" href="/styles.css" />
-    <script src="/scripts.js" defer type="module"></script>
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script src="./js/scripts.js" defer type="module"></script>
+    <script src="./js/data.js" defer type="module"></script>
+    <script src="./js/view.js" defer type="module"></script>
   </head>
 
   <body>
@@ -33,7 +35,7 @@
 
       <form class="overlay__form" data-add-form id="add-form">
         <label class="overlay__field">
-          <div class="overlay__label">Item</div>
+          <div class="overlay__label" data-add-item>Item</div>
           <input class="overlay__input" data-add-title name="title" required>
         </label>
 
